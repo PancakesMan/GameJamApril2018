@@ -29,7 +29,7 @@ public class ShipController : MonoBehaviour {
 
         if (Boosted)
         {
-            CurrentSpeed += BaseSpeed * 5 * Time.deltaTime;
+            CurrentSpeed += BaseSpeed * BoostSpeedModifier * Time.deltaTime;
             if (CurrentSpeed > HardSpeedCap)
                 CurrentSpeed = HardSpeedCap;
         }
