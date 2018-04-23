@@ -12,7 +12,7 @@ public class ShipController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 	}
 	
@@ -46,7 +46,7 @@ public class ShipController : MonoBehaviour {
         float deltaMouseX = Input.mousePosition.x - prevMouseX;
         float deltaMouseY = Input.mousePosition.y - prevMouseY;
 
-        Vector3 angles = transform.eulerAngles + (Vector3.right * -deltaMouseY + Vector3.up * deltaMouseX) * Time.deltaTime * RotateSpeed;
+        Vector3 angles = transform.eulerAngles + (Vector3.right * -Input.GetAxis("Mouse Y") + Vector3.up * Input.GetAxis("Mouse X")) * Time.deltaTime * RotateSpeed;
         transform.eulerAngles = angles;
 
         prevMouseX = Input.mousePosition.x;
