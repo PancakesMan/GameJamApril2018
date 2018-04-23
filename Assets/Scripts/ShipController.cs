@@ -6,6 +6,8 @@ public class ShipController : MonoBehaviour {
 
     public float BaseSpeed, SoftSpeedCap, HardSpeedCap, CurrentSpeed, BoostSpeedModifier;
     public float RotateSpeed = 1.0f;
+    public ParticleSystem Attack;
+    public List<Transform> AttackPositions;
 
     private bool Boosted = false;
 
@@ -23,6 +25,11 @@ public class ShipController : MonoBehaviour {
             Input.GetKeyDown(KeyCode.LeftShift) ||
             Input.GetKeyDown(KeyCode.RightShift))
                 Boosted = !Boosted;
+
+        // Shoot weapons when the user left clicks
+        if (Input.GetMouseButtonDown(0))
+            foreach (var position in AttackPositions)
+                Instantiate(Attack, position);
 
         // Speed up when W is held down
         // Slow down when S is held down

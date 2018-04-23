@@ -6,8 +6,10 @@ public class EnemyAI : MonoBehaviour {
 
     public float Speed;
     public float AttackCooldown = 1.0f;
-    private float timer = 0.0f;
+    public ParticleSystem Attack;
+    public List<Transform> AttackPositions;
 
+    float timer = 0.0f;
     GameObject Player;
 
 	// Use this for initialization
@@ -22,7 +24,8 @@ public class EnemyAI : MonoBehaviour {
         if (timer > AttackCooldown)
         {
             timer = 0.0f;
-            // Use an attack
+            foreach (var position in AttackPositions)
+                Instantiate(Attack, position);
         }
 	}
 
