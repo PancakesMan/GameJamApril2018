@@ -108,7 +108,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -497,7 +497,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 600
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -2608,7 +2608,7 @@ ParticleSystem:
     collisionShape5: {fileID: 0}
     inside: 1
     outside: 0
-    enter: 0
+    enter: 1
     exit: 0
     radiusScale: 1
   SubModule:
