@@ -33,4 +33,13 @@ public class EnemyAI : MonoBehaviour {
     {
         transform.position += transform.forward * Speed * Time.fixedDeltaTime;
     }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        if (other.CompareTag("PlayerProjectile"))
+        {
+            Destroy(other);
+            Destroy(gameObject);
+        }
+    }
 }
