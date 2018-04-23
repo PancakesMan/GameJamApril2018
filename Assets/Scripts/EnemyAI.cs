@@ -37,9 +37,6 @@ public class EnemyAI : MonoBehaviour {
     private void OnParticleCollision(GameObject other)
     {
         if (other.CompareTag("PlayerProjectile"))
-        {
-            Destroy(other);
             Destroy(gameObject);
-        }
     }
 }
