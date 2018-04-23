@@ -8,7 +8,9 @@ public class ShipController : MonoBehaviour {
     public float RotateSpeed = 1.0f;
     public ParticleSystem Attack;
     public List<Transform> AttackPositions;
+    public float AttackCooldown = 1.0f;
 
+    private float timer = 0.0f;
     private bool Boosted = false;
 
 	// Use this for initialization
@@ -19,6 +21,7 @@ public class ShipController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        timer += Time.deltaTime;
 
         // Toggle speed boost when either shift is pressed
         if (CurrentSpeed >= SoftSpeedCap &&
@@ -27,9 +30,14 @@ public class ShipController : MonoBehaviour {
                 Boosted = !Boosted;
 
         // Shoot weapons when the user left clicks
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonUp(0) && timer > AttackCooldown)
+        {
+            timer = 0.0f;
             foreach (var position in AttackPositions)
-                Instantiate(Attack, position);
+            {
+                ParticleSystem ps = Instantiate(Attack, position);
+            }
+        }
 
         // Speed up when W is held down
         // Slow down when S is held down
