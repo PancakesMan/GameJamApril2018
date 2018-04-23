@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4981408049813748}
   - component: {fileID: 198079179045565656}
   - component: {fileID: 199696136368395558}
+  - component: {fileID: 114194752503015286}
   m_Layer: 0
   m_Name: GreenBullet
   m_TagString: PlayerProjectile
@@ -41,6 +42,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114194752503015286
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1147076922346510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a40e5fc66ff67342a4f4db378171476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198079179045565656
 ParticleSystem:
   m_ObjectHideFlags: 1
