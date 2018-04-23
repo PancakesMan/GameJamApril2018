@@ -5,13 +5,14 @@ using UnityEngine;
 public class ShipController : MonoBehaviour {
 
     public float BaseSpeed, SoftSpeedCap, HardSpeedCap, CurrentSpeed, BoostSpeedModifier;
+    public float RotateSpeed = 1.0f;
 
     private bool Boosted = false;
     private float prevMouseX, prevMouseY;
 
 	// Use this for initialization
 	void Start () {
-        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = false;
 	}
 	
@@ -42,13 +43,11 @@ public class ShipController : MonoBehaviour {
             if (CurrentSpeed > SoftSpeedCap)
                 CurrentSpeed = SoftSpeedCap;
 
-        float deltaMouseX = prevMouseX - Input.mousePosition.x;
-        float deltaMouseY = prevMouseY - Input.mousePosition.y;
+        float deltaMouseX = Input.mousePosition.x - prevMouseX;
+        float deltaMouseY = Input.mousePosition.y - prevMouseY;
 
-        Vector3 rotation = transform.eulerAngles;
-        rotation.x += deltaMouseY;
-        rotation.y -= deltaMouseX;
-        transform.eulerAngles = rotation;
+        Vector3 angles = transform.eulerAngles + (Vector3.right * -deltaMouseY + Vector3.up * deltaMouseX) * Time.deltaTime * RotateSpeed;
+        transform.eulerAngles = angles;
 
         prevMouseX = Input.mousePosition.x;
         prevMouseY = Input.mousePosition.y;
