@@ -8,7 +8,6 @@ public class ShipController : MonoBehaviour {
     public float RotateSpeed = 1.0f;
 
     private bool Boosted = false;
-    private float prevMouseX, prevMouseY;
 
 	// Use this for initialization
 	void Start () {
@@ -43,15 +42,8 @@ public class ShipController : MonoBehaviour {
             if (CurrentSpeed > SoftSpeedCap)
                 CurrentSpeed = SoftSpeedCap;
 
-        float deltaMouseX = Input.mousePosition.x - prevMouseX;
-        float deltaMouseY = Input.mousePosition.y - prevMouseY;
-
         Vector3 angles = transform.eulerAngles + (Vector3.right * -Input.GetAxis("Mouse Y") + Vector3.up * Input.GetAxis("Mouse X")) * Time.deltaTime * RotateSpeed;
         transform.eulerAngles = angles;
-
-        prevMouseX = Input.mousePosition.x;
-        prevMouseY = Input.mousePosition.y;
-
 	}
 
     void FixedUpdate()
