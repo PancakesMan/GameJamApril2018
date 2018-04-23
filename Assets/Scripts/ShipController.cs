@@ -7,16 +7,18 @@ public class ShipController : MonoBehaviour {
     public float BaseSpeed, SoftSpeedCap, HardSpeedCap, CurrentSpeed, BoostSpeedModifier;
 
     private bool Boosted = false;
+    private float prevMouseX, prevMouseY;
 
 	// Use this for initialization
 	void Start () {
-		
+        //Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-        // Activate speed boost when either shift is held down
+        // Toggle speed boost when either shift is pressed
         if (CurrentSpeed >= SoftSpeedCap &&
             Input.GetKeyDown(KeyCode.LeftShift) ||
             Input.GetKeyDown(KeyCode.RightShift))
@@ -25,17 +27,31 @@ public class ShipController : MonoBehaviour {
         // Speed up when W is held down
         // Slow down when S is held down
         CurrentSpeed += Input.GetAxis("Vertical") * BaseSpeed * Time.deltaTime;
+
+        // Prevent moving slower than BaseSpeed
         CurrentSpeed = CurrentSpeed < BaseSpeed ? BaseSpeed : CurrentSpeed;
 
         if (Boosted)
         {
+            // Speed up to the HardSpeedCap
             CurrentSpeed += BaseSpeed * BoostSpeedModifier * Time.deltaTime;
             if (CurrentSpeed > HardSpeedCap)
                 CurrentSpeed = HardSpeedCap;
         }
-        else
+        else // Slow down to the SoftSpeedCap
             if (CurrentSpeed > SoftSpeedCap)
                 CurrentSpeed = SoftSpeedCap;
+
+        float deltaMouseX = prevMouseX - Input.mousePosition.x;
+        float deltaMouseY = prevMouseY - Input.mousePosition.y;
+
+        Vector3 rotation = transform.eulerAngles;
+        rotation.x += deltaMouseY;
+        rotation.y -= deltaMouseX;
+        transform.eulerAngles = rotation;
+
+        prevMouseX = Input.mousePosition.x;
+        prevMouseY = Input.mousePosition.y;
 
 	}
 
