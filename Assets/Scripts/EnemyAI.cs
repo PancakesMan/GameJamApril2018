@@ -11,10 +11,12 @@ public class EnemyAI : MonoBehaviour {
 
     float timer = 0.0f;
     GameObject Player;
+    Rigidbody rigidbody;
 
 	// Use this for initialization
 	void Start () {
         Player = GameObject.FindGameObjectWithTag("Player");
+        rigidbody = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
@@ -31,7 +33,8 @@ public class EnemyAI : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        transform.position += transform.forward * Speed * Time.fixedDeltaTime;
+        //transform.position += transform.forward * Speed * Time.fixedDeltaTime;
+        rigidbody.velocity = transform.forward * Speed * Time.fixedDeltaTime;
     }
 
     private void OnParticleCollision(GameObject other)
