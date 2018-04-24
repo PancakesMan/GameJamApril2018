@@ -324,7 +324,7 @@ MonoBehaviour:
   Attack: {fileID: 198368919966665528, guid: 68649b2c64573b24f9c3e21037a788bd, type: 2}
   AttackPositions:
   - {fileID: 4802492942677404}
-  DeathExplosion: {fileID: 198921842184085412, guid: ec8aa48be823b0f4e837b3abf60f4273,
+  DeathExplosion: {fileID: 198661964441305956, guid: 031d08f52af1daa4f929b85221519426,
     type: 2}
 --- !u!114 &114843831132523138
 MonoBehaviour:
@@ -345,4 +345,5 @@ MonoBehaviour:
   Attack: {fileID: 198368919966665528, guid: 68649b2c64573b24f9c3e21037a788bd, type: 2}
   AttackPositions:
   - {fileID: 4496416611163528}
-  DeathExplosion: {fileID: 0}
+  DeathExplosion: {fileID: 198661964441305956, guid: 031d08f52af1daa4f929b85221519426,
+    type: 2}

@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 33982801103080498}
   - component: {fileID: 23498828480546052}
   - component: {fileID: 95058833049488556}
+  - component: {fileID: 114482173058584092}
   m_Layer: 0
   m_Name: evil_cruiser
   m_TagString: Untagged
@@ -448,3 +449,30 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114482173058584092
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1317341021154192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c5b9deae737c64c93e16957538d147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackDamage: 1
+  AttackDistance: 200
+  Attack: {fileID: 198368919966665528, guid: 68649b2c64573b24f9c3e21037a788bd, type: 2}
+  AttackPositions:
+  - {fileID: 4319474796549340}
+  - {fileID: 4002574126395462}
+  - {fileID: 4291859866047760}
+  - {fileID: 4645125491581678}
+  - {fileID: 4665042696503390}
+  - {fileID: 4620302274022484}
+  - {fileID: 4196166202137372}
+  - {fileID: 4364507136019272}
+  - {fileID: 4944883899264410}
+  - {fileID: 4224681714903826}
+  - {fileID: 4003055998530224}
+  - {fileID: 4004774474354984}
