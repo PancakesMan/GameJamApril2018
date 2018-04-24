@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour {
 
+    public int ScoreValue = 100;
     public float Speed;
     public float AttackCooldown = 1.0f;
     public ParticleSystem Attack;
@@ -40,6 +41,9 @@ public class EnemyAI : MonoBehaviour {
     private void OnParticleCollision(GameObject other)
     {
         if (other.CompareTag("PlayerProjectile"))
+        {
+            Player.GetComponent<ScoreSystem>().Score += ScoreValue;
             Destroy(gameObject);
+        }
     }
 }
