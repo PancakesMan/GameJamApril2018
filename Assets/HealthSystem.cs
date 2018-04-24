@@ -27,9 +27,13 @@ public class HealthSystem : MonoBehaviour {
         if (CurrentHealth <= 0)
         {
             if (controller)
+            {
                 Instantiate(controller.DeathExplosion, transform.position, transform.rotation);
-            gameObject.SetActive(false);
-            Invoke("LoadDeathScene", DeathSceneTimeout);
+                controller.audioSources[2].PlayOneShot(controller.audioSources[2].clip, 10);
+                gameObject.GetComponent<MeshRenderer>().enabled = false;
+                controller.Controllable = false;
+                Invoke("LoadDeathScene", DeathSceneTimeout);
+            }
         }
 	}
 
