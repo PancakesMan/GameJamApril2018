@@ -27,7 +27,7 @@ public class HealthSystem : MonoBehaviour {
         if (CurrentHealth <= 0)
         {
             if (controller)
-                Instantiate(controller.DeathExplosion, transform);
+                Instantiate(controller.DeathExplosion, transform.position, transform.rotation);
             gameObject.SetActive(false);
             Invoke("LoadDeathScene", DeathSceneTimeout);
         }

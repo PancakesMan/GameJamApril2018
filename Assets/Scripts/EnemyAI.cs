@@ -49,7 +49,7 @@ public class EnemyAI : MonoBehaviour {
         if (other.CompareTag("PlayerProjectile"))
         {
             Player.GetComponent<ScoreSystem>().Score += ScoreValue;
-            Instantiate(DeathExplosion, transform);
+            Instantiate(DeathExplosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
