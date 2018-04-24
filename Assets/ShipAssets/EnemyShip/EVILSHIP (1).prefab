@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114864023777964408}
   - component: {fileID: 64986118160681828}
   - component: {fileID: 54251000570380978}
+  - component: {fileID: 82437355011252162}
   m_Layer: 0
   m_Name: EVILSHIP (1)
   m_TagString: Untagged
@@ -143,6 +144,122 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d2d71eb839c72fe42bd72862c8516952, type: 3}
+--- !u!82 &82437355011252162
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1847513646183404}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bca3b46783c066544870378e70b6d1b0, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 200
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0.01
+      value: 1
+      inSlope: -8.061583
+      outSlope: -8.061583
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.07108261
+      value: 0.69921875
+      inSlope: -4.084251
+      outSlope: -4.084251
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.118590385
+      value: 0.51852417
+      inSlope: -3.0330951
+      outSlope: -3.0330951
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.20181091
+      value: 0.28381348
+      inSlope: -2.2085743
+      outSlope: -2.2085743
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.2837793
+      value: 0.14047241
+      inSlope: -1.4752
+      outSlope: -1.4752
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.39662963
+      value: 0.042785645
+      inSlope: -0.669575
+      outSlope: -0.669575
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.6341101
+      value: 0
+      inSlope: -0.03358504
+      outSlope: -0.03358504
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: -0.010003988
+      outSlope: -0.010003988
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114864023777964408
 MonoBehaviour:
   m_ObjectHideFlags: 1

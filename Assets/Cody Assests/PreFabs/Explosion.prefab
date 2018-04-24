@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 4131527145545194}
   - component: {fileID: 198661964441305956}
   - component: {fileID: 199386815546848880}
+  - component: {fileID: 82339835733488786}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: PlayerProjectile
@@ -289,6 +290,122 @@ Transform:
   m_Father: {fileID: 4933437622818108}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &82339835733488786
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1870692788905292}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b74c04954e23c9a4e90b12808891623e, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0.002
+      value: 1
+      inSlope: -4.807094
+      outSlope: -4.807094
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.030035432
+      value: 0.726532
+      inSlope: -8.888296
+      outSlope: -8.888296
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.061188906
+      value: 0.45991516
+      inSlope: -6.132531
+      outSlope: -6.132531
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.11508262
+      value: 0.22467041
+      inSlope: -1.8388891
+      outSlope: -1.8388891
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.2498033
+      value: 0.10229492
+      inSlope: -0.5056183
+      outSlope: -0.5056183
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.43083525
+      value: 0.056884766
+      inSlope: -0.19426428
+      outSlope: -0.19426428
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.7379522
+      value: 0.018341064
+      inSlope: -0.119824186
+      outSlope: -0.119824186
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0.002
+      inSlope: -0.002000801
+      outSlope: -0.002000801
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!198 &198010438741098076
 ParticleSystem:
   m_ObjectHideFlags: 1
