@@ -284,6 +284,36 @@ Transform:
   m_Father: {fileID: 2049200607}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &129214202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1048560660901520, guid: 253ad12687d04f64f98d1c0a156563ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 129214203}
+  m_Layer: 0
+  m_Name: Laser (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &129214203
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4004774474354984, guid: 253ad12687d04f64f98d1c0a156563ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 129214202}
+  m_LocalRotation: {x: -0, y: -0.22291204, z: -0, w: 0.9748386}
+  m_LocalPosition: {x: -1.2263, y: -0.24397, z: 2.3836}
+  m_LocalScale: {x: 0.0134283835, y: 0.013428378, z: 0.013428381}
+  m_Children: []
+  m_Father: {fileID: 587074048}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &155611800
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,6 +481,11 @@ Transform:
   m_Father: {fileID: 2049200607}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &587074048 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4861889155308070, guid: 253ad12687d04f64f98d1c0a156563ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 1729240419}
 --- !u!1 &587080953
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,6 +668,66 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 253ad12687d04f64f98d1c0a156563ee, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &877934591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1048560660901520, guid: 253ad12687d04f64f98d1c0a156563ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 877934592}
+  m_Layer: 0
+  m_Name: Laser (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &877934592
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4004774474354984, guid: 253ad12687d04f64f98d1c0a156563ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 877934591}
+  m_LocalRotation: {x: -0, y: -0.22291204, z: -0, w: 0.9748386}
+  m_LocalPosition: {x: -1.7871, y: -0.24397, z: 2.5211}
+  m_LocalScale: {x: 0.0134283835, y: 0.013428378, z: 0.013428381}
+  m_Children: []
+  m_Father: {fileID: 587074048}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &967882420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1048560660901520, guid: 253ad12687d04f64f98d1c0a156563ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 967882421}
+  m_Layer: 0
+  m_Name: Laser (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &967882421
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4004774474354984, guid: 253ad12687d04f64f98d1c0a156563ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967882420}
+  m_LocalRotation: {x: -0, y: -0.22291204, z: -0, w: 0.9748386}
+  m_LocalPosition: {x: -0.15298, y: -0.24397, z: 2.1032}
+  m_LocalScale: {x: 0.0134283835, y: 0.013428378, z: 0.013428381}
+  m_Children: []
+  m_Father: {fileID: 587074048}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1033370497
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,4 +1078,64 @@ Transform:
   - {fileID: 1033370498}
   m_Father: {fileID: 0}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2088367542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1048560660901520, guid: 253ad12687d04f64f98d1c0a156563ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2088367543}
+  m_Layer: 0
+  m_Name: Laser (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2088367543
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4004774474354984, guid: 253ad12687d04f64f98d1c0a156563ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2088367542}
+  m_LocalRotation: {x: -0, y: -0.22291204, z: -0, w: 0.9748386}
+  m_LocalPosition: {x: 0.40712, y: -0.25288, z: 1.9185}
+  m_LocalScale: {x: 0.0134283835, y: 0.013428378, z: 0.013428381}
+  m_Children: []
+  m_Father: {fileID: 587074048}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2124562452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1048560660901520, guid: 253ad12687d04f64f98d1c0a156563ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2124562453}
+  m_Layer: 0
+  m_Name: Laser (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2124562453
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4004774474354984, guid: 253ad12687d04f64f98d1c0a156563ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2124562452}
+  m_LocalRotation: {x: -0, y: -0.22291204, z: -0, w: 0.9748386}
+  m_LocalPosition: {x: -0.65307, y: -0.24397, z: 2.2393}
+  m_LocalScale: {x: 0.0134283835, y: 0.013428378, z: 0.013428381}
+  m_Children: []
+  m_Father: {fileID: 587074048}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
