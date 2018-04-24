@@ -13,6 +13,9 @@ public class SpawnSystem : MonoBehaviour {
 	void Update () {
         timer += Time.deltaTime;
         if (timer > SpawnCooldown)
+        {
             Instantiate(Spawns[Random.Range(0, Spawns.Count)], SpawnPositions[Random.Range(0, SpawnPositions.Count)]);
+            timer = 0.0f;
+        }
 	}
 }
