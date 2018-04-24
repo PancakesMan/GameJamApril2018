@@ -31,7 +31,10 @@ public class EnemyAI : MonoBehaviour {
         {
             timer = 0.0f;
             foreach (var position in AttackPositions)
-                Instantiate(Attack, position);
+            {
+                ParticleSystem ps = Instantiate(Attack, position);
+                ps.transform.parent = transform;
+            }
         }
 	}
 
