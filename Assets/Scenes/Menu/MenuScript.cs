@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 public class MenuScript : MonoBehaviour {
 
 	
-    public void StartGame()
+    public void LoadScene(int index)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(index);
+    }
+
+    public void CloseGame()
+    {
+        Application.Quit();
     }
 }
 
