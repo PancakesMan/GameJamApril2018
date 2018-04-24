@@ -590,7 +590,8 @@ MonoBehaviour:
   Attack: {fileID: 198368919966665528, guid: 68649b2c64573b24f9c3e21037a788bd, type: 2}
   AttackPositions:
   - {fileID: 4649502101319534}
-  DeathExplosion: {fileID: 0}
+  DeathExplosion: {fileID: 198661964441305956, guid: 031d08f52af1daa4f929b85221519426,
+    type: 2}
 --- !u!114 &114747229574561796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -610,7 +611,7 @@ MonoBehaviour:
   Attack: {fileID: 198368919966665528, guid: 68649b2c64573b24f9c3e21037a788bd, type: 2}
   AttackPositions:
   - {fileID: 4714280260064242}
-  DeathExplosion: {fileID: 198921842184085412, guid: ec8aa48be823b0f4e837b3abf60f4273,
+  DeathExplosion: {fileID: 198661964441305956, guid: 031d08f52af1daa4f929b85221519426,
     type: 2}
 --- !u!114 &114761900027671910
 MonoBehaviour:
@@ -631,7 +632,8 @@ MonoBehaviour:
   Attack: {fileID: 198368919966665528, guid: 68649b2c64573b24f9c3e21037a788bd, type: 2}
   AttackPositions:
   - {fileID: 4338107956467432}
-  DeathExplosion: {fileID: 0}
+  DeathExplosion: {fileID: 198661964441305956, guid: 031d08f52af1daa4f929b85221519426,
+    type: 2}
 --- !u!114 &114797780845557906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -651,4 +653,5 @@ MonoBehaviour:
   Attack: {fileID: 198368919966665528, guid: 68649b2c64573b24f9c3e21037a788bd, type: 2}
   AttackPositions:
   - {fileID: 4004158973034332}
-  DeathExplosion: {fileID: 0}
+  DeathExplosion: {fileID: 198661964441305956, guid: 031d08f52af1daa4f929b85221519426,
+    type: 2}
