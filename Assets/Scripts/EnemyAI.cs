@@ -8,6 +8,7 @@ public class EnemyAI : MonoBehaviour {
     public float Speed;
     public float AttackCooldown = 1.0f;
     public int AttackDamage = 1;
+    public float AttackDistance = 10.0f;
     public ParticleSystem Attack;
     public List<Transform> AttackPositions;
 
@@ -25,9 +26,9 @@ public class EnemyAI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.LookAt(Player.transform);
+        transform.forward = Vector3.MoveTowards(transform.forward, Player.transform.position, Time.deltaTime);
         timer += Time.deltaTime;
-        if (timer > AttackCooldown)
+        if (timer > AttackCooldown && Vector3.Distance(transform.position, Player.transform.position) < AttackDistance)
         {
             timer = 0.0f;
             foreach (var position in AttackPositions)
