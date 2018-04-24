@@ -82,6 +82,12 @@ public class ShipController : MonoBehaviour {
             EnemyAI enemy = other.transform.parent.GetComponent<EnemyAI>();
             if (enemy)
                 HP.CurrentHealth -= enemy.AttackDamage;
+            else
+            {
+                CruiserAI cruiser = other.transform.parent.GetComponent<CruiserAI>();
+                if (cruiser)
+                    HP.CurrentHealth -= cruiser.AttackDamage;
+            }
         }
     }
 }
