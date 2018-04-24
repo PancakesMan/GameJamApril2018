@@ -836,6 +836,12 @@ MonoBehaviour:
   - {fileID: 749843441}
   - {fileID: 605259829}
   AttackCooldown: 1
+  Controllable: 1
+  DeathExplosion: {fileID: 198661964441305956, guid: 031d08f52af1daa4f929b85221519426,
+    type: 2}
+  boostedSound: {fileID: 0}
+  regularSound: {fileID: 0}
+  audioSources: []
 --- !u!23 &296491281
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -928,6 +934,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a48a9ec857e554b867523056afd5bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHealth: 0
+  CurrentHealth: 0
+  DeathSceneIndex: 0
+  DeathSceneTimeout: 1
+  DisplayText: {fileID: 0}
 --- !u!1 &300803652
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,8 +1144,12 @@ MonoBehaviour:
   Speed: 5
   AttackCooldown: 1
   AttackDamage: 1
-  Attack: {fileID: 0}
-  AttackPositions: []
+  AttackDistance: 10
+  Attack: {fileID: 198368919966665528, guid: 68649b2c64573b24f9c3e21037a788bd, type: 2}
+  AttackPositions:
+  - {fileID: 1409211034}
+  DeathExplosion: {fileID: 198661964441305956, guid: 031d08f52af1daa4f929b85221519426,
+    type: 2}
 --- !u!23 &351886346
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2382,8 +2397,12 @@ MonoBehaviour:
   Speed: 5
   AttackCooldown: 1
   AttackDamage: 1
-  Attack: {fileID: 0}
-  AttackPositions: []
+  AttackDistance: 10
+  Attack: {fileID: 198368919966665528, guid: 68649b2c64573b24f9c3e21037a788bd, type: 2}
+  AttackPositions:
+  - {fileID: 1602529913}
+  DeathExplosion: {fileID: 198661964441305956, guid: 031d08f52af1daa4f929b85221519426,
+    type: 2}
 --- !u!23 &630969861
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5507,8 +5526,12 @@ MonoBehaviour:
   Speed: 5
   AttackCooldown: 1
   AttackDamage: 1
-  Attack: {fileID: 0}
-  AttackPositions: []
+  AttackDistance: 10
+  Attack: {fileID: 198368919966665528, guid: 68649b2c64573b24f9c3e21037a788bd, type: 2}
+  AttackPositions:
+  - {fileID: 422777777}
+  DeathExplosion: {fileID: 198661964441305956, guid: 031d08f52af1daa4f929b85221519426,
+    type: 2}
 --- !u!23 &2126726181
 MeshRenderer:
   m_ObjectHideFlags: 0
