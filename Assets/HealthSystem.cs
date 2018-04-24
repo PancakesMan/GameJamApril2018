@@ -20,7 +20,7 @@ public class HealthSystem : MonoBehaviour {
 	void Update () {
 		if (CurrentHealth != OldHealth)
         {
-            DisplayText.text = "Health: " + CurrentHealth;
+            DisplayText.text = "Health: " + (CurrentHealth < 0 ? 0 : CurrentHealth);
             OldHealth = CurrentHealth;
         }
 
