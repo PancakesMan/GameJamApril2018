@@ -60,9 +60,15 @@ public class ShipController : MonoBehaviour {
             if (CurrentSpeed > SoftSpeedCap)
                 CurrentSpeed = SoftSpeedCap;
 
-        Vector3 angles = transform.eulerAngles + (Vector3.right * -Input.GetAxis("Mouse Y") + Vector3.up * Input.GetAxis("Mouse X")) * Time.deltaTime * RotateSpeed;
+        float deltaY = Input.GetAxis("Mouse Y"), deltaX = Input.GetAxis("Mouse X");
+        Vector3 angles = transform.eulerAngles + (Vector3.right * -deltaY + Vector3.up * deltaX) * Time.deltaTime * RotateSpeed;
         transform.eulerAngles = angles;
-	}
+
+        //var r = transform.rotation;
+        //r = Quaternion.AngleAxis(deltaX, transform.up) * r;
+        //r = Quaternion.AngleAxis(-deltaY, transform.right) * r;
+        //transform.rotation = r;
+    }
 
     void FixedUpdate()
     {
