@@ -26,7 +26,7 @@ public class EnemyAI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.forward = Vector3.MoveTowards(transform.forward, Player.transform.position, Time.deltaTime);
+        transform.LookAt(Player.transform);
         timer += Time.deltaTime;
         if (timer > AttackCooldown && Vector3.Distance(transform.position, Player.transform.position) < AttackDistance)
         {
