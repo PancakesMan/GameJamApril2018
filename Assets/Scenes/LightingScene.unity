@@ -305,7 +305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2117102108}
   FollowingDistance: 10
-  FloatingDistance: -2
+  FloatingDistance: -1.5
   Speed: 1
 --- !u!1001 &355090454
 Prefab:
@@ -889,15 +889,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8890a4f60a95a714aa91d46b9828d722, type: 3}
       propertyPath: m_LocalScale.z
-      value: 8.4301405
+      value: 14.118133
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8890a4f60a95a714aa91d46b9828d722, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.479203
+      value: 7.5014153
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8890a4f60a95a714aa91d46b9828d722, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.4792037
+      value: 7.5014176
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 8890a4f60a95a714aa91d46b9828d722, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1105,6 +1105,7 @@ MonoBehaviour:
   - {fileID: 901531430}
   - {fileID: 453913151}
   AttackCooldown: 1
+  DeathExplosion: {fileID: 0}
 --- !u!4 &2117102108 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 8890a4f60a95a714aa91d46b9828d722, type: 3}
