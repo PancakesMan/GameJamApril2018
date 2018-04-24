@@ -34,8 +34,7 @@ public class EnemyAI : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        //transform.position += transform.forward * Speed * Time.fixedDeltaTime;
-        rigidbody.velocity = transform.forward * Speed * Time.fixedDeltaTime;
+        rigidbody.velocity = transform.forward * Speed * Time.deltaTime;
     }
 
     private void OnParticleCollision(GameObject other)

@@ -34,9 +34,7 @@ public class ShipController : MonoBehaviour {
         {
             timer = 0.0f;
             foreach (var position in AttackPositions)
-            {
-                ParticleSystem ps = Instantiate(Attack, position);
-            }
+                Instantiate(Attack, position);
         }
 
         // Speed up when W is held down

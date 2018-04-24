@@ -7,7 +7,7 @@ public class ScoreSystem : MonoBehaviour {
 
     public Text DisplayText;
     public int Score;
-    private int OldScore;
+    private int OldScore = -1;
 
 	// Use this for initialization
 	void Start () {
