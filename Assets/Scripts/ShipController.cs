@@ -10,13 +10,18 @@ public class ShipController : MonoBehaviour {
     public List<Transform> AttackPositions;
     public float AttackCooldown = 1.0f;
 
+    public ParticleSystem DeathExplosion;
+
     private float timer = 0.0f;
     private bool Boosted = false;
+    private HealthSystem HP;
 
 	// Use this for initialization
 	void Start () {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        HP = GetComponent<HealthSystem>();
 	}
 	
 	// Update is called once per frame
@@ -62,5 +67,15 @@ public class ShipController : MonoBehaviour {
     void FixedUpdate()
     {
         transform.position += transform.forward * CurrentSpeed * Time.fixedDeltaTime;
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        if (other.CompareTag("EnemyProjectile"))
+        {
+            EnemyAI enemy = other.transform.parent.GetComponent<EnemyAI>();
+            if (enemy)
+                HP.CurrentHealth -= enemy.AttackDamage;
+        }
     }
 }
