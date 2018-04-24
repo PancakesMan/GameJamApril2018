@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnSystem : MonoBehaviour {
 
-    public GameObject Spawn;
+    public List<GameObject> Spawns;
     public List<Transform> SpawnPositions;
     public float SpawnCooldown = 1.0f;
     private float timer = 0.0f;
@@ -13,6 +13,6 @@ public class SpawnSystem : MonoBehaviour {
 	void Update () {
         timer += Time.deltaTime;
         if (timer > SpawnCooldown)
-            Instantiate(Spawn, SpawnPositions[Random.Range(0, SpawnPositions.Count)]);
+            Instantiate(Spawns[Random.Range(0, Spawns.Count)], SpawnPositions[Random.Range(0, SpawnPositions.Count)]);
 	}
 }
