@@ -20,7 +20,7 @@ public class HealthSystem : MonoBehaviour {
 	void Update () {
 		if (CurrentHealth != OldHealth)
         {
-            DisplayText.text = "Health: " + CurrentHealth;
+            DisplayText.text = "Health: " + (CurrentHealth < 0 ? 0 : CurrentHealth);
             OldHealth = CurrentHealth;
         }
 
@@ -28,7 +28,7 @@ public class HealthSystem : MonoBehaviour {
         {
             if (controller)
                 Instantiate(controller.DeathExplosion, transform);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             Invoke("LoadDeathScene", DeathSceneTimeout);
         }
 	}

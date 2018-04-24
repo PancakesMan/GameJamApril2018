@@ -8,6 +8,7 @@ public class EnemyAI : MonoBehaviour {
     public float Speed;
     public float AttackCooldown = 1.0f;
     public int AttackDamage = 1;
+    public float AttackDistance = 10.0f;
     public ParticleSystem Attack;
     public List<Transform> AttackPositions;
 
@@ -27,11 +28,14 @@ public class EnemyAI : MonoBehaviour {
 	void Update () {
         transform.LookAt(Player.transform);
         timer += Time.deltaTime;
-        if (timer > AttackCooldown)
+        if (timer > AttackCooldown && Vector3.Distance(transform.position, Player.transform.position) < AttackDistance)
         {
             timer = 0.0f;
             foreach (var position in AttackPositions)
-                Instantiate(Attack, position);
+            {
+                ParticleSystem ps = Instantiate(Attack, position);
+                ps.transform.parent = transform;
+            }
         }
 	}
 
