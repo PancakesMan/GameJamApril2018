@@ -11,10 +11,12 @@ public class ShipController : MonoBehaviour {
     public float AttackCooldown = 1.0f;
 
     public ParticleSystem DeathExplosion;
+    public AudioClip boostedSound, regularSound;
 
     private float timer = 0.0f;
     private bool Boosted = false;
     private HealthSystem HP;
+    private AudioSource audio;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +24,7 @@ public class ShipController : MonoBehaviour {
         Cursor.visible = false;
 
         HP = GetComponent<HealthSystem>();
+        audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -32,7 +35,14 @@ public class ShipController : MonoBehaviour {
         if (CurrentSpeed >= SoftSpeedCap &&
             Input.GetKeyDown(KeyCode.LeftShift) ||
             Input.GetKeyDown(KeyCode.RightShift))
-                Boosted = !Boosted;
+        {
+            Boosted = !Boosted;
+            if (Boosted)
+                audio.clip = boostedSound;
+            else
+                audio.clip = regularSound;
+
+        }
 
         // Shoot weapons when the user left clicks
         if (Input.GetMouseButtonUp(0) && timer > AttackCooldown)
