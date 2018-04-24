@@ -155,9 +155,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScoreValue: 100
-  Speed: 100
-  AttackCooldown: 2
+  Speed: 500
+  AttackCooldown: 3
   AttackDamage: 1
+  AttackDistance: 10
   Attack: {fileID: 198368919966665528, guid: 68649b2c64573b24f9c3e21037a788bd, type: 2}
   AttackPositions:
   - {fileID: 4871603810754614}
