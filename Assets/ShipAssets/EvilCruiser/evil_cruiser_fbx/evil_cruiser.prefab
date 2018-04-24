@@ -460,8 +460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5b9deae737c64c93e16957538d147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackDamage: 1
-  AttackDistance: 200
+  AttackDamage: 10
+  AttackDistance: 500
   Attack: {fileID: 198368919966665528, guid: 68649b2c64573b24f9c3e21037a788bd, type: 2}
   AttackPositions:
   - {fileID: 4319474796549340}
