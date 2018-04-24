@@ -16,7 +16,7 @@ public class ShipController : MonoBehaviour {
     private float timer = 0.0f;
     private bool Boosted = false;
     private HealthSystem HP;
-    private AudioSource audio;
+    private AudioSource[] audioSources;
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +24,7 @@ public class ShipController : MonoBehaviour {
         Cursor.visible = false;
 
         HP = GetComponent<HealthSystem>();
-        audio = GetComponent<AudioSource>();
+        audioSources = GetComponents<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -38,9 +38,9 @@ public class ShipController : MonoBehaviour {
         {
             Boosted = !Boosted;
             if (Boosted)
-                audio.clip = boostedSound;
+                audioSources[0].clip = boostedSound;
             else
-                audio.clip = regularSound;
+                audioSources[0].clip = regularSound;
 
         }
 
@@ -49,7 +49,10 @@ public class ShipController : MonoBehaviour {
         {
             timer = 0.0f;
             foreach (var position in AttackPositions)
+            {
                 Instantiate(Attack, position);
+                audioSources[1].Play();
+            }
         }
 
         // Speed up when W is held down
