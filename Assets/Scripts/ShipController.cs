@@ -51,7 +51,7 @@ public class ShipController : MonoBehaviour {
             foreach (var position in AttackPositions)
             {
                 Instantiate(Attack, position);
-                audioSources[1].Play();
+                audioSources[0].PlayOneShot(audioSources[1].clip);
             }
         }
 
