@@ -32,6 +32,7 @@ public class HealthSystem : MonoBehaviour {
                 controller.audioSources[2].PlayOneShot(controller.audioSources[2].clip, 10);
                 gameObject.GetComponent<MeshRenderer>().enabled = false;
                 controller.Controllable = false;
+                PlayerPrefs.SetInt("PlayScore", GetComponent<ScoreSystem>().Score);
                 Invoke("LoadDeathScene", DeathSceneTimeout);
             }
         }

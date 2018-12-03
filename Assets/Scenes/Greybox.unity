@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.207
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.005483414, g: 0.063292384, b: 0.19500932, a: 0.207}
+  m_IndirectSpecularColor: {r: 0.005638167, g: 0.06337453, b: 0.19503641, a: 0.207}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -605,6 +605,11 @@ Prefab:
       propertyPath: AttackDistance
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 114482173058584092, guid: 253ad12687d04f64f98d1c0a156563ee,
+        type: 2}
+      propertyPath: AttackCooldown
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 253ad12687d04f64f98d1c0a156563ee, type: 2}
   m_IsPrefabParent: 0
@@ -827,16 +832,16 @@ RectTransform:
   m_GameObject: {fileID: 48045742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.5125003, y: 4.5125012, z: -4.131351}
+  m_LocalScale: {x: 1.8884411, y: 1.8884413, z: -1.7289333}
   m_Children: []
   m_Father: {fileID: 1661458584}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 372, y: 43}
+  m_AnchoredPosition: {x: 20, y: 4}
   m_SizeDelta: {x: 160, y: 30}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &48045744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -858,20 +863,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: f5335cdfb603c19468fe8d996fc6349a, type: 3}
-    m_FontSize: 20
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 100
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'text
-
-'
+  m_Text: text
 --- !u!222 &48045745
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3220,14 +3223,14 @@ RectTransform:
   m_GameObject: {fileID: 212307829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.4059083, y: 3.4059086, z: 3.4059086}
+  m_LocalScale: {x: 1.5653001, y: 1.5653008, z: 1.5653008}
   m_Children: []
   m_Father: {fileID: 1661458584}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 288.6, y: -62.4}
+  m_AnchoredPosition: {x: 144, y: -28}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &212307831
@@ -3251,10 +3254,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: f5335cdfb603c19468fe8d996fc6349a, type: 3}
-    m_FontSize: 14
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 50
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -3505,6 +3508,11 @@ Prefab:
     - target: {fileID: 1317341021154192, guid: 253ad12687d04f64f98d1c0a156563ee, type: 2}
       propertyPath: m_Name
       value: evil_cruiser (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482173058584092, guid: 253ad12687d04f64f98d1c0a156563ee,
+        type: 2}
+      propertyPath: AttackCooldown
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 253ad12687d04f64f98d1c0a156563ee, type: 2}
@@ -11138,7 +11146,12 @@ Prefab:
     - target: {fileID: 64165243860306090, guid: 9759d82d264c6ef48a79468e6942007a,
         type: 2}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114309934539961920, guid: 9759d82d264c6ef48a79468e6942007a,
+        type: 2}
+      propertyPath: DeathSceneIndex
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9759d82d264c6ef48a79468e6942007a, type: 2}
@@ -12432,6 +12445,11 @@ Prefab:
     - target: {fileID: 1317341021154192, guid: 253ad12687d04f64f98d1c0a156563ee, type: 2}
       propertyPath: m_Name
       value: evil_cruiser (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482173058584092, guid: 253ad12687d04f64f98d1c0a156563ee,
+        type: 2}
+      propertyPath: AttackCooldown
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 253ad12687d04f64f98d1c0a156563ee, type: 2}
@@ -15171,6 +15189,11 @@ Prefab:
         type: 2}
       propertyPath: AttackDistance
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482173058584092, guid: 253ad12687d04f64f98d1c0a156563ee,
+        type: 2}
+      propertyPath: AttackCooldown
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 253ad12687d04f64f98d1c0a156563ee, type: 2}
@@ -28572,6 +28595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttackDamage: 10
   AttackDistance: 500
+  AttackCooldown: 0
   Attack: {fileID: 198368919966665528, guid: 68649b2c64573b24f9c3e21037a788bd, type: 2}
   AttackPositions:
   - {fileID: 1256771244}

@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/Obj.unity
     guid: c5547a2f216cc2a4b830aafac12bdf8c
+  - enabled: 1
+    path: Assets/Scenes/Menu/Highscores.unity
+    guid: 5dbb18c367c42db41acbc2cc962b1496

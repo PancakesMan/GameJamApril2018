@@ -6,6 +6,7 @@ public class CruiserAI : MonoBehaviour {
 
     public int AttackDamage = 1;
     public float AttackDistance = 10.0f;
+    public float AttackCooldown = 0.1f;
     public ParticleSystem Attack;
     public List<Transform> AttackPositions;
 
@@ -23,7 +24,7 @@ public class CruiserAI : MonoBehaviour {
         foreach (var position in AttackPositions)
         {
             position.LookAt(Player.transform);
-            if (Vector3.Distance(position.position, Player.transform.position) < AttackDistance && timer > 0.1f)
+            if (Vector3.Distance(position.position, Player.transform.position) < AttackDistance && timer > AttackCooldown)
             {
                 timer = 0.0f;
                 ParticleSystem ps = Instantiate(Attack, position);
